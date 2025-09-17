@@ -28,7 +28,7 @@ export class SignatureService {
       if (!ethers.isAddress(signerAddress)) {
         throw new Error("Failed to recover valid address from signature");
       }
-
+      console.log("Signer address is", signerAddress);
       return {
         isValid: true,
         signer: signerAddress,
